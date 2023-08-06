@@ -1,4 +1,4 @@
-import type { GatsbyConfig } from "gatsby";
+import type {GatsbyConfig} from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -16,6 +16,14 @@ const config: GatsbyConfig = {
       "path": "./src/pages/"
     },
     __key: "pages"
+    },
+        {
+            resolve: 'gatsby-plugin-page-creator',
+            options: {
+                path: './src/pages',
+                separator: '_',
+                name: 'pages',
+            }
   }]
 };
 
